@@ -14,11 +14,13 @@ isMale= true;
 let hobbies: string[];
 hobbies=['Table tennis','Listening Songs']
 
-let person:{
+type Person={
     name:string,
-    age:number,
+    age:number | string,
     hobbies:string[]
 }
+
+let person:Person;
 
 person={
     name:"Manish",
@@ -27,11 +29,7 @@ person={
 }
 
 
-let personList:{
-    name:string,
-    age:number,
-    hobbies:string[]
-}[]
+let personList:Person[]
 
 personList=[
     {
@@ -46,3 +44,8 @@ personList=[
     },
     
 ]
+
+// Type Inference
+
+let course:string | number = "Type script";
+course=2;

@@ -49,3 +49,28 @@ personList=[
 
 let course:string | number = "Type script";
 course=2;
+
+//Functions and type
+
+const multiply=(a:number,b:number):number|string|{data:string|number}=>{
+    return {data:a * b}
+}
+
+multiply(1,2)
+
+//Generics
+
+const insertNewStudent=(listOfStudent:any[],nameOfStudent)=>{
+    const updatedList=[nameOfStudent,...listOfStudent]
+    return updatedList;
+}
+
+const studentList=["Manish","Suman"];
+
+const studentData=insertNewStudent(studentList,"Avishek")
+
+const studentRollNoList=[1,2,3,4]
+
+const studentRollNumberList=insertNewStudent(studentRollNoList,5)
+
+
